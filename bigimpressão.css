@@ -1,0 +1,25 @@
+a:link{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    text-decoration: none;
+    color: blue;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('WhatsApp Image 2023-07-19 at 03.25.27.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+
+}
+body{
+    text-align: center;
+    display: list-item;
+    color: rgb(8, 11, 15);
+    font-size: 30px;
+    
+}

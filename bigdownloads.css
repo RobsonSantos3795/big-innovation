@@ -1,0 +1,21 @@
+a:link{
+    text-decoration: none;
+    color: black;
+
+}
+a:hover{
+    text-decoration: none;
+    color: blue;
+
+}
+.titulo{
+    text-align: center;
+}
+.inicial{
+    text-align: center;
+    font-size: 18px;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(45deg, rgb(217, 255, 0), rgb(79, 216, 66));
+}
