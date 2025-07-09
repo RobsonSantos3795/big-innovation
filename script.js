@@ -3,7 +3,7 @@ var menu = document.getElementById("menu");
 
 logina.addEventListener("click", function() {
     menu.classList.toggle("visible");
-    if (menu.style.display == "block") {
+    if (menu.style.display === "block") {
         menu.style.display = "none";
     } else {
         menu.style.display = "block";
