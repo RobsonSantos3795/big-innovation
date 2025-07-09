@@ -19,3 +19,14 @@ function suspender() {
         alert("Insira um valor válido!");
     }
 }
+
+function valor() {
+    let voltar = "index.html";
+
+    if (voltar) {
+        alert("Redirecionamento para página principal");
+        window.location.href = "index.html";
+    } else {
+        alert("Algo deu errado! Tente novamente mais tarde.");
+    }
+}
