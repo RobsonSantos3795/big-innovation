@@ -20,7 +20,7 @@ function suspender() {
     }
 }
 
-function valor() {
+function valtar() {
     let voltar = "index.html";
 
     if (voltar) {
