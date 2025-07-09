@@ -16,6 +16,6 @@ function suspender() {
     if (suspiro) {
         window.location.href = suspiro;
     } else {
-        alert("Erro de codificação!");
+        alert("Insira um valor válido!");
     }
 }
