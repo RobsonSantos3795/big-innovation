@@ -1,0 +1,359 @@
+/* Variáveis CSS para cores */
+:root {
+    --primary-green: #28a745; /* Um verde vibrante */
+    --secondary-green: #218838; /* Um verde um pouco mais escuro para interações */
+    --light-green: #e6ffe6; /* Um verde muito claro para fundos */
+    --white: #ffffff; /* Branco puro */
+    --off-white: #f8f9fa; /* Branco levemente acinzentado */
+    --dark-text: #343a40; /* Cinza escuro para textos */
+    --light-gray: #6c757d; /* Cinza claro para textos secundários */
+    --border-color: #dee2e6; /* Cor para bordas sutis */
+}
+
+/* Estilos globais e reset */
+body {
+    font-family: 'Inter', sans-serif; /* Usando a fonte Inter */
+    margin: 0;
+    padding: 0;
+    background-color: var(--off-white); /* Fundo geral claro */
+    color: var(--dark-text); /* Cor padrão do texto */
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: var(--primary-green); /* Fundo verde vibrante */
+    color: var(--white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas menores */
+}
+
+.cabecalho .logo {
+    height: 80px; /* Ajuste o tamanho da logo conforme necessário */
+    width: auto;
+    border-radius: 8px; /* Cantos arredondados para a logo */
+}
+
+.cabecalho #searchInput {
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 25px; /* Cantos bem arredondados */
+    margin-left: 1rem;
+    flex-grow: 1; /* Permite que o input ocupe o espaço disponível */
+    max-width: 400px; /* Limita a largura máxima do input */
+    background-color: var(--white);
+    color: var(--dark-text);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.cabecalho #searchInput::placeholder {
+    color: var(--light-gray);
+}
+
+.cabecalho #searchInput:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.3); /* Sombra verde ao focar */
+}
+
+.cabecalho #confirmButton {
+    background-color: var(--secondary-green); /* Verde mais escuro para o botão */
+    color: var(--white);
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 25px; /* Cantos bem arredondados */
+    margin-left: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cabecalho #confirmButton:hover {
+    background-color: var(--primary-green); /* Volta ao verde primário no hover */
+    transform: translateY(-2px); /* Efeito de leve levantamento */
+}
+
+.cabecalho #confirmButton i {
+    font-size: 1.2rem;
+}
+
+/* Seção de resultados de pesquisa (placeholder) */
+#searchResults {
+    margin: 1rem 2rem;
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: none; /* Escondido por padrão, para ser mostrado via JS */
+}
+
+/* Menu de navegação */
+.texto {
+    background-color: var(--light-green); /* Fundo verde claro para a seção do menu */
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+}
+
+#menu-button {
+    background-color: var(--primary-green);
+    color: var(--white);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    display: none; /* Escondido por padrão em telas maiores, visível em mobile */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#menu-button:hover {
+    background-color: var(--secondary-green);
+    transform: translateY(-2px);
+}
+
+#menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que os itens do menu quebrem a linha */
+}
+
+#menu li {
+    margin: 0 1rem;
+}
+
+#menu a {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: 500;
+    padding: 0.5rem 0;
+    display: block;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+#menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--primary-green);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+#menu a:hover {
+    color: var(--primary-green);
+}
+
+#menu a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Títulos principais */
+.titulo1 {
+    text-align: center;
+    color: var(--primary-green);
+    font-size: 2.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.textoh2 {
+    text-align: center;
+    color: var(--dark-text);
+    font-size: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    text-align: center;
+    color: var(--secondary-green);
+    font-size: 1.7rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Contêiner de imagens */
+#container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Layout responsivo de grid */
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+#container .item {
+    width: 100%;
+    height: auto;
+    border-radius: 12px; /* Cantos arredondados para as imagens */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#container .item:hover {
+    transform: scale(1.03); /* Leve zoom ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Blocos de serviços */
+#Bloco1 {
+    background-color: var(--white);
+    margin: 1.5rem auto;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    max-width: 800px;
+}
+
+#Bloco1 li {
+    list-style: none; /* Remove os marcadores de lista */
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem; /* Espaçamento para o ícone de lista customizado */
+    position: relative;
+}
+
+#Bloco1 li::before {
+    content: '•'; /* Ícone de lista customizado */
+    color: var(--primary-green);
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#Bloco1 a {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+#Bloco1 a:hover {
+    color: var(--primary-green);
+    text-decoration: underline;
+}
+
+/* Estilo para o link do WhatsApp no final */
+body > ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+body > ul li p a {
+    background-color: var(--primary-green);
+    color: var(--white);
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+body > ul li p a:hover {
+    background-color: var(--secondary-green);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .cabecalho .logo {
+        margin-bottom: 1rem;
+    }
+
+    .cabecalho #searchInput {
+        margin-left: 0;
+        margin-bottom: 1rem;
+        width: 90%; /* Ocupa mais largura em mobile */
+        max-width: none;
+    }
+
+    .cabecalho #confirmButton {
+        margin-left: 0;
+        width: 90%; /* Ocupa mais largura em mobile */
+    }
+
+    .texto {
+        padding: 1rem;
+    }
+
+    #menu-button {
+        display: block; /* Mostra o botão do menu em telas menores */
+    }
+
+    #menu {
+        flex-direction: column;
+        align-items: center;
+        display: none; /* Esconde o menu por padrão, para ser ativado pelo JS */
+        width: 100%;
+        background-color: var(--light-green);
+        border-top: 1px solid var(--border-color);
+        padding-top: 1rem;
+    }
+
+    #menu.active {
+        display: flex; /* Mostra o menu quando a classe 'active' é adicionada */
+    }
+
+    #menu li {
+        margin: 0.5rem 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    #menu a {
+        padding: 0.8rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .titulo1 {
+        font-size: 2rem;
+    }
+
+    .textoh2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    #container {
+        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+        padding: 1rem;
+    }
+
+    #Bloco1 {
+        padding: 1rem;
+    }
+}
