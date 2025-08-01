@@ -358,3 +358,10 @@ body > ul li p a:hover {
         padding: 1rem;
     }
 }
+.footer {
+    background-color: rgb(143, 211, 40);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-weight: bold;
+}
