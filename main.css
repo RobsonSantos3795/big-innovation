@@ -16,9 +16,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--off-white); /* Fundo geral claro */
-    /*color: var(--dark-text);  Cor padrão do texto */
+    color: var(--dark-text);  /*Cor padrão do texto */
     line-height: 1.6;
-    color: "green";
+    
 }
 
 /* Cabeçalho */
@@ -343,6 +343,7 @@ body > ul li p a:hover {
 
     .textoh2 {
         font-size: 1.5rem;
+        color: green;
     }
 
     h3 {
